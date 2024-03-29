@@ -6,31 +6,38 @@ return {
       require "configs.conform"
     end,
   },
-    {
-    'nvim-telescope/telescope.nvim', tag = '0.1.6',
--- or                              , branch = '0.1.x',
+  {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.6',
+    -- or                              , branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim' }
-    },
+  },
   -- These are some examples, uncomment them if you want to see them work!
-  -- {
-  --   "neovim/nvim-lspconfig",
-  --   config = function()
-  --     require("nvchad.configs.lspconfig").defaults()
-  --     require "configs.lspconfig"
-  --   end,
-  -- },
-  --
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("nvchad.configs.lspconfig").defaults()
+      require "configs.lspconfig"
+    end,
+  },
+
   {
     "williamboman/mason.nvim",
     opts = {
-   		ensure_installed = {
-   			"lua-language-server", "stylua",
-   			"html-lsp", "css-lsp" , "prettier", 
-        "typescript-language-server"
-   		},
-   	},
-   }
-  
+      ensure_installed = {
+        "lua-language-server", "stylua",
+        "html-lsp", "css-lsp", "prettier",
+        "typescript-language-server",
+        "vue-language-server",
+        "tailwindcss-language-server",
+        "python-lsp-server",
+        "intelephense",
+        "json-lsp",
+        "powershell-editor-services"
+      },
+    },
+  }
+
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {
